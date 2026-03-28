@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - character
+  - Fuse
+  - bomb
   layers:
   - Default
   - TransparentFX

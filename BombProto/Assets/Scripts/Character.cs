@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -25,10 +26,14 @@ public class Character : MonoBehaviour
     public Rock rock;
     
     public GameObject armRight;
-
+   
     bool shortRangeAttack = true;
     bool startRockSpawn = false;
     float rockTimer = 0.0f;
+
+    /// Jake's Variables Below
+    public GameObject Bomb;
+    public GameObject obj;
 
     void Awake()
     {
@@ -194,4 +199,10 @@ public class Character : MonoBehaviour
             shovel.EnableHitbox(value);
         }
     }
+
+    public void PlantBomb()
+    {
+        obj = GameObject.Find("Character");
+        Instantiate(Bomb, obj.transform.position, Quaternion.identity);
+    }    
 }
