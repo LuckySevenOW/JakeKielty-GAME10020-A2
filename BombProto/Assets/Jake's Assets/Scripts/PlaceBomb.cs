@@ -57,7 +57,7 @@ public class PlaceBomb : MonoBehaviour
 
     public void LayFuse()
     {
-        while (isInFuseLayingMode == true)
+        if (isInFuseLayingMode == true)
         {
             void OnTriggerExit(Collider bomb)
             { 
